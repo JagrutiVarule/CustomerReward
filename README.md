@@ -21,7 +21,7 @@ Endpoint - http://localhost:8081/CalculateReward/CustomerTotalPoints?customerId=
 Method: GET 
 
 <br>
-Response:
+Response: <br>
 ```json
 {
     "customerId": 2,
@@ -55,7 +55,7 @@ Endpoint - http://localhost:8081/CalculateReward/perMonth?customerId=2&month=02&
 Method: GET 
 
 <br>
-Response:
+Response: <br>
 ```json
 {
     "customerId": 2,
