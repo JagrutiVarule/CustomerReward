@@ -21,7 +21,8 @@ Endpoint - http://localhost:8081/CalculateReward/CustomerTotalPoints?customerId=
 Method: GET 
 
 <br>
-Response: <br>
+Response: 
+<br>
 ```json
 {
     "customerId": 2,
@@ -47,8 +48,8 @@ Response: <br>
         }
     ],
     "totalPoints": 460
-}
-```
+}```
+<br>
 
 ## Monthly Reward Points: Calculates total points for the specified month.
 Endpoint - http://localhost:8081/CalculateReward/perMonth?customerId=2&month=02&year=2025
@@ -75,8 +76,9 @@ Response: <br>
         }
     ],
     "totalPoints": 370
-}
-```
+}```
+<br>
+
 ## Request Steps
 ### Cloning:
 
