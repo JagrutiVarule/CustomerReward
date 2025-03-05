@@ -22,7 +22,8 @@ Method: GET
 
 <br>
 Response:
- {
+```json
+{
     "customerId": 2,
     "customerName": "Tina",
     "transactions": [
@@ -55,6 +56,7 @@ Method: GET
 
 <br>
 Response:
+```json
 {
     "customerId": 2,
     "customerName": "Tina",
@@ -74,3 +76,23 @@ Response:
     ],
     "totalPoints": 370
 }
+
+## Request Steps
+### Cloning:
+
+	Clone the repository from GitHub.
+
+### Run the application:
+
+	Navigate to the project directory and run mvn spring-boot:run.
+
+### Make a Request:
+
+	Use Postman or any HTTP client to send the GET /CalculateReward/ request.
+
+## Technologies Used
+- Java 17
+- Spring Boot
+- Maven
+- JUnit (for unit tests)
+- mysql Database

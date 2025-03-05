@@ -23,7 +23,7 @@ class RewardCalculationTest {
     private CustomerRepo customerRepo;
 
     @Mock
-    private TransRepo transRepo;
+    private TransRepo transactionRepo;
 
     @InjectMocks
     private RewardCalculation rewardCalculation;
@@ -43,7 +43,7 @@ class RewardCalculationTest {
         Transactions trans1 = new Transactions();
         trans1.setAmount(150);
         mockTransactions.add(trans1);
-        when(transRepo.findTransactions(eq(customerId), any(LocalDate.class), any(LocalDate.class)))
+        when(transactionRepo.findTransactions(eq(customerId), any(LocalDate.class), any(LocalDate.class)))
                 .thenReturn(mockTransactions);
         rewardCalculation.calculateMonthWise(customerId, month, year);
 	}
@@ -55,7 +55,7 @@ class RewardCalculationTest {
         Transactions trans1 = new Transactions();
         trans1.setAmount(150);
         mockTransactions.add(trans1);
-        when(transRepo.findByCustomerId(customerId)).thenReturn(mockTransactions);
+        when(transactionRepo.findByCustomerId(customerId)).thenReturn(mockTransactions);
         rewardCalculation.totalRewardPoints(customerId);
 	}
 
@@ -78,7 +78,7 @@ class RewardCalculationTest {
         trans1.setAmount(200);
         mockTransactions.add(trans1);
         when(customerRepo.findById(customerId)).thenReturn(Optional.of(customer));
-        when(transRepo.findTransactions(eq(customerId), any(LocalDate.class), any(LocalDate.class)))
+        when(transactionRepo.findTransactions(eq(customerId), any(LocalDate.class), any(LocalDate.class)))
                 .thenReturn(mockTransactions);
         rewardCalculation.getCustomerData(customerId, month, year);
 	}

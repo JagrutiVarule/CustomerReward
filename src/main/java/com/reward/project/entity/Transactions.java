@@ -8,7 +8,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+@Getter
+@Setter
+@NoArgsConstructor
 @Entity
 public class Transactions {
 	@Id
@@ -21,37 +26,4 @@ public class Transactions {
     @ManyToOne
     @JoinColumn(name = "customerId",insertable=false, updatable=false)
     private Customer customer;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public double getAmount() {
-		return amount;
-	}
-
-	public void setAmount(double amount) {
-		this.amount = amount;
-	}
-
-	public LocalDate getTransDate() {
-		return transDate;
-	}
-
-	public void setTransDate(LocalDate transDate) {
-		this.transDate = transDate;
-	}
-
-	public Long getCustomerId() {
-		return customerId;
-	}
-
-	public void setCustomerId(Long customerId) {
-		this.customerId = customerId;
-	}
-    
 }
